@@ -12,9 +12,8 @@ const participantSchema = new mongoose.Schema(
       required: true
     },
     attending: {
-      type: String,
-      default: "Pending",
-      enum: ["Pending", "Attending", "Not Attending"]
+      type: Boolean,
+      default: null // null until user chooses
     }
   },
   { timestamps: true }
